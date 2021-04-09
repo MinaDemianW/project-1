@@ -5,6 +5,7 @@ export default function handleSubmit(event) {
     let data = {txt: document.getElementById('name').value}
     
     // console.log("::: Form Submitted :::")
+    // Refer to https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     fetch('http://localhost:3000/api', {
         method: 'POST',
         headers: {

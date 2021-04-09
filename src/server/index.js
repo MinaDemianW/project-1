@@ -22,6 +22,7 @@ app.listen(3000, function () {
 
 app.post('/api', function (req, res) {
     const txt = req.body.txt;
+    // Referce to https://www.educative.io/edpresso/how-to-make-an-axios-post-request
     axios.post('https://api.meaningcloud.com/sentiment-2.1?key=' + process.env.API_KEY + '&lang=en&txt=' + txt)
     .then(respose=> res.send(respose.data))
     .catch(error => {console.log(error)})
