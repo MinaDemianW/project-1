@@ -3,13 +3,15 @@ const express = require('express')
 require('dotenv').config()
 const axios = require('axios')
 const bodyparser = require('body-parser')
+var cors = require('cors')
 
 const app = express()
 
 app.use(express.static('dist'))
 app.use(bodyparser.json({extended:true}))
+app.use(cors())
 
-console.log(__dirname)
+// console.log(__dirname)
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')

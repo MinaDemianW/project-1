@@ -1,4 +1,4 @@
-export default function checkForName(inputText) {
+export default (inputText) => {
     console.log("::: Running checkForName :::", inputText);
     let names = [
         "Picard",
